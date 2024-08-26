@@ -2,7 +2,7 @@ package com.ivano.prueba.ConnectionAs400;
 
 
 public class AS400Util {
-    private ConnectionAs400 connection;
+    private final ConnectionAs400 connection;
 
     public AS400Util(String systemName, String userId, String password) {
         this.connection = new ConnectionAs400(hostSystem(systemName), userId, password);
@@ -23,15 +23,15 @@ public class AS400Util {
 
     private String hostSystem(String sys){
         switch (sys) {
-            case "Desa":
-                return sys.replaceAll(sys, "172.18.3.16");
             case "Test":
-                return sys.replaceAll(sys, "172.18.3.16");
-            case "Prod":            
-                return sys.replaceAll(sys, "172.18.3.16");
+                sys.replaceAll(sys, "172.18.3.16");
+                break;
+            case "Prod":
+               // return sys.replaceAll(sys, "172.18.3.16");
             default :
                 return sys.replaceAll(sys, "172.18.3.16");  
         }
+        return sys;
     }
     private boolean stateConection(){
         try {

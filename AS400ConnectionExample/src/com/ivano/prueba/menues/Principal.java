@@ -12,7 +12,7 @@ public class Principal {
         boolean endpgm;
         int     pasoNro = 0;
         if (!troncal.isConnected()) return false;
-
+        if (troncal.isConnected()) System.out.println("Llego");;
         do {
             endpgm = true;
             switch (pasoNro){
