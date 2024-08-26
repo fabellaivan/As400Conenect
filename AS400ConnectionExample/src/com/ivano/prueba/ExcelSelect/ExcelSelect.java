@@ -1,11 +1,11 @@
-package ExcelSelect;
+package com.ivano.prueba.ExcelSelect;
 
 import java.io.File;
 import java.awt.event.*;
 import javax.swing.*;
 
-import Utils.Utils;
-import Utils.Utils.WindowComponents;
+import com.ivano.prueba.Utils.Utils;
+import com.ivano.prueba.Utils.Utils.WindowComponents;
 
 public class ExcelSelect {
 

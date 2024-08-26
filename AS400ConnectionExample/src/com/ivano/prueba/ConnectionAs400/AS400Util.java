@@ -1,4 +1,4 @@
-package ConnectionAs400;
+package com.ivano.prueba.ConnectionAs400;
 
 
 public class AS400Util {
@@ -10,6 +10,15 @@ public class AS400Util {
     
     public boolean isConnected() {
         return this.stateConection();
+    }
+
+    public void disconnect() {
+        this.disconnectAllServices();
+        System.out.println("Desconectado!");
+    }
+
+    public boolean checkLib (String lib){
+        return this.checkLibP(lib);
     }
 
     private String hostSystem(String sys){
@@ -34,10 +43,6 @@ public class AS400Util {
         }
     }
 
-    public void disconnect() {
-        this.disconnectAllServices();
-        System.out.println("Desconectado!");
-    }
 
     private void disconnectAllServices(){
         try {
@@ -47,6 +52,15 @@ public class AS400Util {
         }
     }
 
+
+    private boolean checkLibP(String lib){
+        try{
+            return this.connection.checkLibraryExists(lib);
+        }catch (Exception e) {
+            System.out.println("Error al buscar la lib: " + e.getMessage());
+        }
+        return false;
+    }
 
    /*  public boolean CommandCall(String command,String lib,String table){
         // Crear instancia de CommandCall

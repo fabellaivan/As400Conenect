@@ -1,13 +1,14 @@
-package EnviromentSelect;
+package com.ivano.prueba.EnviromentSelect;
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import com.ivano.prueba.Login.Login;
+import com.ivano.prueba.Utils.Utils;
+import com.ivano.prueba.Utils.Utils.WindowComponents;
+
 import javax.swing.*;
-import Login.Login;
-import Utils.Utils;
-import Utils.Utils.WindowComponents;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class EnviromentSelect {
+public class EnviromentSelectDepre {
     public static void showEnvironmentSelection() {
         WindowComponents components = Utils.createWindow("Miralo a Duraznito", 300, 200);
         placeComponents(components.getPanel(), components.getFrame());
@@ -22,7 +23,7 @@ public class EnviromentSelect {
         comboBox2.setBounds(75, 40, 150, 25);
         panel.add(comboBox2);
 
-        // Crear el botón de continuar
+        // Botón de continuar
         JButton continueButton = new JButton("Continuar");
         continueButton.setBounds(95, 100, 100, 25);
         panel.add(continueButton);
@@ -30,7 +31,7 @@ public class EnviromentSelect {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         
-        // Agregar acción al botón de continuar
+        // Acción al botón de continuar
         continueButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();

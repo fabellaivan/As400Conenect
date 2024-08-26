@@ -1,14 +1,15 @@
-package Troncal;
+package com.ivano.prueba.Troncal;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import ConnectionAs400.*;
-import ExcelSelect.ExcelSelect;
-import Utils.Utils;
+import com.ivano.prueba.ConnectionAs400.*;
+import com.ivano.prueba.ExcelSelect.ExcelSelect;
+import com.ivano.prueba.Utils.Utils;
 
 public class Troncal {
     private AS400Util cAs400;
+
     public Troncal(String sysIn, String user, String password){
         this.Connect(sysIn, user, password);
     }
@@ -48,5 +49,7 @@ public class Troncal {
         this.cAs400.disconnect();
     }
 
+    public boolean isConnected(){ return this.cAs400.isConnected();}
 
+    public boolean checkLibT(String lib){ return this.cAs400.checkLib(lib);}
 }

@@ -1,16 +1,15 @@
-package Login;
+package com.ivano.prueba.Login;
+
+import com.ivano.prueba.Troncal.Troncal;
+import com.ivano.prueba.Utils.Utils;
+import com.ivano.prueba.Utils.Utils.WindowComponents;
 
 import javax.swing.*;
-
-import Troncal.Troncal;
-import Utils.Utils;
-import Utils.Utils.WindowComponents;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Login {
+public class LoginDepre {
     static String sysIn;
     public static void showLogin(String system) {
         sysIn = system;

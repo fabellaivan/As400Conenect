@@ -1,4 +1,4 @@
-package ConnectionAs400;
+package com.ivano.prueba.ConnectionAs400;
 import com.ibm.as400.access.*;
 
 public class ConnectionAs400 {
@@ -23,4 +23,13 @@ public class ConnectionAs400 {
         return this.as400;
     }
 
+    public boolean checkLibraryExists(String libraryName) {
+        try {
+            IFSFile library = new IFSFile(this.as400, "/QSYS.LIB/" + libraryName + ".LIB");
+            return library.exists();
+        } catch (Exception e) {
+            System.out.println("Error al buscar la biblioteca: " + e.getMessage());
+            return false;
+        }
+    }
 }
