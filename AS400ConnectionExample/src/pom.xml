@@ -48,7 +48,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Main-Class>com.ivano.prueba.Index__</Main-Class>
+                            <Main-Class>com.ivano.prueba.Index</Main-Class>
                         </manifestEntries>
                     </archive>
                 </configuration>

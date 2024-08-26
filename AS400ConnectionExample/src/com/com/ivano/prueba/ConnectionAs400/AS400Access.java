@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 public class AS400Access {
     @Contract("_, _, _ -> new")
     public static @NotNull AS400 createAS400Connection(String systemName, String userId, @NotNull String password) throws AS400SecurityException {
-       password = "pass";
+
         char[] passwordCharArray = password.toCharArray();
         return new AS400(systemName, userId, passwordCharArray);
     }
