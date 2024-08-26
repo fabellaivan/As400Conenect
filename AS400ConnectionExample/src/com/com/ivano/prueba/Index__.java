@@ -5,7 +5,7 @@ import java.io.IOException;
 import com.ibm.as400.access.AS400;
 import com.ibm.as400.access.AS400SecurityException;
 
-public class AS400ConnectionExample {
+public class Index__ {
     public static void main(String[] args) {
         // IP del AS400
         String systemName = "172.18.3.16";

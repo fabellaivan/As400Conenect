@@ -3,7 +3,7 @@ package com.ivano.prueba.Troncal;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.ivano.prueba.ConnectionAs400.*;
+import com.ivano.prueba.ConnectionAs400.AS400Util;
 import com.ivano.prueba.ExcelSelect.ExcelSelect;
 import com.ivano.prueba.Utils.Utils;
 
