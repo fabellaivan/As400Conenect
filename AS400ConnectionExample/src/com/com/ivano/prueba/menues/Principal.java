@@ -2,11 +2,12 @@ package com.ivano.prueba.menues;
 
 import com.ivano.prueba.Troncal.Troncal;
 
-import java.util.Scanner;
+import java.io.Console;
 
 public class Principal {
     static Troncal troncal;
-    static Scanner scanner = new Scanner(System.in);
+    static Console console = System.console();
+    static String  lib;
     public static boolean Menu(String sysIn,String user, String pass){
         troncal =  new Troncal(sysIn,user, pass);
         boolean endpgm;
@@ -32,6 +33,7 @@ public class Principal {
 
     private static boolean checkLib() {
         System.out.println("Ingrese biblioteca");
-        return troncal.checkLibT(scanner.toString());
+        lib = console.readLine();
+        return troncal.checkLibT(lib);
     }
 }
