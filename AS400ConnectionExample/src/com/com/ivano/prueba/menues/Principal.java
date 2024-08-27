@@ -20,6 +20,8 @@ public class Principal {
                 if(checkLib()){
                     System.out.println();
                 }
+                case 0:
+                    pasoNro++;
             }
 
 
