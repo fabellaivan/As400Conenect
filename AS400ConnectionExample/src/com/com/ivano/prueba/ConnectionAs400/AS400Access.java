@@ -10,6 +10,6 @@ public class AS400Access {
     public static @NotNull AS400 createAS400Connection(String systemName, String userId, @NotNull String password) throws AS400SecurityException {
 
         char[] passwordCharArray = password.toCharArray();
-        return new AS400(systemName, userId, passwordCharArray);
+        return new AS400(systemName, userId, "suenios$3");
     }
 }
